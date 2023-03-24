@@ -1,0 +1,104 @@
+:root{
+    --primary-col:rgb(222, 0, 222) ;
+    --second-col:rgb(195, 0, 195);
+    --background-col: rgb(40, 40, 40);
+
+}
+
+*{
+background-color: var(--background-col);
+font-family: serif;
+margin:20px;
+}
+
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+}
+
+header h1 {
+    color: var(--primary-col);
+}
+
+header h3 {
+    color: #fff;
+}
+
+section{
+    display: grid;
+    width: 100%;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+
+
+section h2{
+    color: var(--primary-col);
+    border:1px solid #FFF;
+    border-radius: 5px;
+    padding: 5px;
+    position: relative;
+    bottom: 55px;
+
+    
+}
+
+section h3{
+    color:var(--second-col)
+}
+
+section p {
+    color: #fff;
+    height: 200px;
+
+}
+
+article {
+    border: 1px dashed #FFF;
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+
+}
+
+article:hover {
+    box-shadow: 5px 5px 5px 5px  var(--second-col);
+      
+  }
+
+article p {
+    background-image: linear-gradient( rgba(232,102,235,0.3)0%, rgba(232,102,235,0.6)100% );
+    display: flex;
+    justify-content: space-around;
+    border-radius: 15px ;
+    padding: 40px
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--second-col);
+}
+
+@media screen and (max-width:992px) {								
+    section{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    }
+@media screen and (max-width:600px) {								
+    section{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    }
+
+
+
+
+
